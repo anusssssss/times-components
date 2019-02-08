@@ -3,6 +3,7 @@ import { ScrollView } from "react-native";
 import {
   mockLeadOneFullWidthSlice,
   mockLeadOneAndOneSlice,
+  mockLeadersSlice,
   mockSecondaryOneSlice,
   mockSecondaryFourSlice,
   mockList2AndSixNoPicSlice
@@ -15,7 +16,9 @@ import {
   SecondaryOneSlice,
   SecondaryFourSlice,
   SecondaryTwoAndTwoSlice,
-  SecondaryTwoNoPicAndTwoSlice
+  SecondaryTwoNoPicAndTwoSlice,
+  LeadersSlice,
+  ListTwoAndSixNoPicSlice
 } from "./src/slices";
 
 export default {
@@ -153,6 +156,21 @@ export default {
         );
       },
       name: "List Two And Six No Pic Four (CCLLLLLL)",
+      type: "story"
+    },
+    {
+      component: () => {
+        const slice = mockLeadersSlice();
+        return (
+          <LeadersSlice
+            leader1={slice.leader1}
+            leader2={slice.leader2}
+            leader3={slice.leader3}
+            onPress={() => {}}
+          />
+        );
+      },
+      name: "Leaders (MMMM)",
       type: "story"
     }
   ],

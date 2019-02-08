@@ -5,6 +5,7 @@ import {
   LeadOneAndOneSlice,
   LeadOneAndTwoSlice,
   LeadTwoNoPicAndTwoSlice,
+  LeadersSlice,
   SecondaryOneSlice,
   SecondaryFourSlice,
   SecondaryTwoNoPicAndTwoSlice,
@@ -122,6 +123,15 @@ function mockList2AndSixNoPicSlice(): TwoPicAndSixNoPicSlice {
   };
 }
 
+function mockLeadersSlice(): LeadersSlice {
+  const tiles = getTiles(3);
+  return <LeadersSlice>{
+    leader1: tiles[0],
+    leader2: tiles[1],
+    leader3: tiles[2]
+  };
+}
+
 function mockArticleSlice(count: number): ArticleSlice {
   return { items: getTiles(count) };
 }
@@ -133,6 +143,7 @@ export {
   mockLeadOneAndOneSlice,
   mockLeadOneAndTwoSlice,
   mockLeadTwoNoPicAndTwoSlice,
+  mockLeadersSlice,
   mockSecondaryOneSlice,
   mockSecondaryFourSlice,
   mockSecondaryTwoNoPicAndTwoSlice,
