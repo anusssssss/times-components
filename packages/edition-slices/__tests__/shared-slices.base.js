@@ -4,7 +4,8 @@ import { iterator } from "@times-components/test-utils";
 import {
   mockSecondaryFourSlice,
   mockSecondaryTwoNoPicAndTwoSlice,
-  mockList2AndSixNoPicSlice
+  mockList2AndSixNoPicSlice,
+  mockLeadersSlice
 } from "@times-components/fixture-generator";
 import leadOneAndOneDataGenerator from "../fixtures/leadoneandone";
 import {
@@ -12,6 +13,7 @@ import {
   LeadOneAndOneSlice,
   LeadOneFullWidthSlice,
   ListTwoAndSixNoPicSlice,
+  LeadersSlice,
   SecondaryOneSlice,
   SecondaryFourSlice,
   SecondaryTwoAndTwoSlice,
@@ -153,6 +155,21 @@ export default () => {
           />
         );
 
+        expect(output).toMatchSnapshot();
+      }
+    },
+    {
+      name: "Leaders",
+      test: () => {
+        const leadersData = mockLeadersSlice();
+        const output = TestRenderer.create(
+              <LeadersSlice
+              leader1={leadersData.leader1}
+              leader2={leadersData.leader2}
+              leader3={leadersData.leader3}
+              onPress={() => {}}
+            />
+        );
         expect(output).toMatchSnapshot();
       }
     }
