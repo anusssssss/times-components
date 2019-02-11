@@ -17,8 +17,7 @@ import {
   SecondaryFourSlice,
   SecondaryTwoAndTwoSlice,
   SecondaryTwoNoPicAndTwoSlice,
-  LeadersSlice,
-  ListTwoAndSixNoPicSlice
+  LeadersSlice
 } from "./src/slices";
 
 export default {
